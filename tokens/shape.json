@@ -1,0 +1,6 @@
+{
+  "shape": {
+    "$description": "Corner radii. To be decided.",
+    "radius": { "$type": "dimension" }
+  }
+}

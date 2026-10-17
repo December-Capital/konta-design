@@ -1,0 +1,10 @@
+{
+  "layout": {
+    "$type": "dimension",
+    "$description": "Content width, side margins and section spacing. To be decided."
+  },
+  "space": {
+    "$type": "dimension",
+    "$description": "Spacing steps inside components. To be decided."
+  }
+}

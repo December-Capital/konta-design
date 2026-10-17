@@ -1,0 +1,6 @@
+{
+  "role": {
+    "$type": "color",
+    "$description": "Role colours for the marketing site (konta.md), light theme. Each role points at a palette token, e.g. \"bg\": { \"$value\": \"{color.brand.sand}\" }. To be defined."
+  }
+}

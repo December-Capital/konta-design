@@ -1,0 +1,14 @@
+{
+  "color": {
+    "$type": "color",
+    "$description": "The palette. Only the brand colours read off the logo are fixed so far; the scales and supporting tones are added when the palette is decided.",
+    "brand": {
+      "sand": { "$value": "#ECE8E1", "$description": "The logo's light field" },
+      "plum": { "$value": "#3D2C4B", "$description": "The logo mark on light" },
+      "bronze": { "$value": "#A07F54", "$description": "The logo bars on light" },
+      "lavender": { "$value": "#C9B4DD", "$description": "The logo mark on dark" },
+      "gold": { "$value": "#C9A46B", "$description": "The logo bars on dark" },
+      "graphite": { "$value": "#16161A", "$description": "The dark ground of konta.md" }
+    }
+  }
+}

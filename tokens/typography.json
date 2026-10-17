@@ -1,0 +1,9 @@
+{
+  "font": {
+    "$type": "fontFamily",
+    "$description": "Typefaces. To be decided."
+  },
+  "type": {
+    "$description": "Type sizes, leading and tracking. To be decided."
+  }
+}

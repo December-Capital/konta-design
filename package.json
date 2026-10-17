@@ -1,0 +1,26 @@
+{
+  "name": "konta-design",
+  "version": "0.1.0",
+  "description": "Konta's visual design as data: colour, type, shape, spacing and motion tokens, brand assets, the design guide and dated mockups.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/December-Capital/konta-design.git"
+  },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "check": "node tools/build.mjs --check && node tools/check-contrast.mjs"
+  },
+  "files": [
+    "build",
+    "tokens",
+    "assets"
+  ],
+  "devDependencies": {
+    "style-dictionary": "5.6.0"
+  }
+}
