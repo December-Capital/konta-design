@@ -16,9 +16,9 @@ Two families, never more.
 | By | TypeTogether for Google | Mike Abbink for IBM |
 | Licence | SIL Open Font License 1.1 | SIL Open Font License 1.1 |
 
-> **Pending:** the brand book names IBM Plex Sans for text, and it is what konta.md serves today.
-> The redesign's `DESIGN.md` names Onest (and Source Serif 4 for titles). The tokens follow the
-> brand book until the owner confirms.
+**Decided (owner, 2026-10-24):** text and interface are IBM Plex Sans, as in the brand book and
+on konta.md today. The redesign's `DESIGN.md` names Onest for text and Source Serif 4 for
+titles; neither applies.
 
 **Literata is always set at the 24pt optical size** (`font-variation-settings: 'opsz' 24`,
 token `--type-heading-optical-size`). Literata's display cuts thin the K's arm to a hairline.

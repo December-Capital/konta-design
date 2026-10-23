@@ -3,7 +3,7 @@
     "$type": "fontFamily",
     "$description": "Typefaces, from the brand book (2026-10-23, page 18). Both cover Romanian (ș ț with the comma below) and Cyrillic, both are under the SIL Open Font License, and both are self-hosted from assets/fonts/.",
     "serif": { "$value": ["Literata", "Georgia", "Times New Roman", "serif"], "$description": "Logo, headings and large figures. SemiBold 600, always the 24pt optical size" },
-    "sans": { "$value": ["IBM Plex Sans", "Segoe UI", "Roboto", "Arial", "sans-serif"], "$description": "Body text, labels, tables, buttons and the app. 400, 500, 600. Pending the owner's confirmation: redesign/DESIGN.md names Onest here" }
+    "sans": { "$value": ["IBM Plex Sans", "Segoe UI", "Roboto", "Arial", "sans-serif"], "$description": "Body text, labels, tables, buttons and the app. 400, 500, 600. Decided by the owner on 2026-10-24; DESIGN.md's Onest does not apply" }
   },
   "type": {
     "$description": "The web type scale, from the brand book's hierarchy table (page 19). Where the brand book gives a range, min and max are its two ends; how a size moves between them is not decided. The app's denser sizes are not decided either.",

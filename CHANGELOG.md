@@ -16,9 +16,10 @@ redesign's `DESIGN.md` for the roles, corners and motion.
   `DESIGN.md`. The dark theme is its own design: Grafit 600–800, colour only in Liliac and Aur.
   All 140 text-on-surface pairs pass WCAG AA; the check now also covers the app's side menu
   and row hover.
-- **Type.** Literata for headings, always at the 24pt optical size, and IBM Plex Sans for text,
-  with the brand book's web sizes (`--type-*`). The web fonts and the print cut, with their
-  SIL Open Font Licences, in `assets/fonts/`.
+- **Type.** Literata for headings, always at the 24pt optical size, and IBM Plex Sans for text
+  (confirmed by the owner on 2026-10-24; the Onest and Source Serif 4 named in `DESIGN.md` do
+  not apply), with the brand book's web sizes (`--type-*`). The web fonts and the print cut,
+  with their SIL Open Font Licences, in `assets/fonts/`.
 - **Shape and motion.** Radii 4, 8 and 10px and pill buttons; one entrance, 800ms, 22px rise.
   `--measure: 65ch` for body text.
 - **Logo.** The mark in five colour versions and the konta.md lockups (horizontal and stacked)
@@ -30,9 +31,9 @@ redesign's `DESIGN.md` for the roles, corners and motion.
 - **Guide.** `color.md`, `typography.md`, `shape-space-motion.md` written, `logo.md` added, and
   the palette board in `guide/palette/` with screenshots in both themes.
 
-Not in this release, waiting on the owner: the text typeface (`DESIGN.md` says Onest), the
-name's colour in the konta.md on-dark files, SVG and PDF logo files, the plain "Konta" lockups,
-new social images, spacing, and the app's type sizes.
+Not in this release, waiting on the owner: the name's colour in the konta.md on-dark files,
+SVG and PDF logo files, the plain "Konta" lockups, new social images, spacing, and the app's
+type sizes.
 
 ## 0.1.0 (unreleased)
 

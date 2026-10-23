@@ -16,7 +16,7 @@ disagree, the tokens are right and the guide is out of date.
 | Chapter | Will cover | State |
 | --- | --- | --- |
 | [color.md](color.md) | The palette, the role of each colour in each theme, contrast rules | Written; board in [palette/](palette) |
-| [typography.md](typography.md) | Typefaces, sizes, figures, Romanian and Cyrillic | Written; text face pending |
+| [typography.md](typography.md) | Typefaces, sizes, figures, Romanian and Cyrillic | Written |
 | [logo.md](logo.md) | Lockups, clear space, minimum size, which version on which background, the icon | Written; SVG and PDF files to come |
 | [shape-space-motion.md](shape-space-motion.md) | Corners, spacing, surfaces, movement | Corners and motion; spacing open |
 | [site.md](site.md) | konta.md: page structure and components | Empty |
