@@ -5,9 +5,10 @@ logo-ul și regulile după care se folosesc. Site-ul [konta.md](https://konta.md
 și, mai târziu, aplicațiile pentru iPhone și Android își iau aspectul de aici, ca să arate la
 fel peste tot.
 
-> **Stadiu: doar structura.** Sunt fixate deocamdată numai cele șase culori din logo. Paleta
-> completă, literele și regulile pentru fiecare pagină se adaugă pe măsură ce sunt hotărâte.
-> Nimic de aici nu schimbă încă site-ul sau aplicația.
+> **Stadiu: marca din 23 octombrie 2026.** Sunt fixate paleta completă cu rolurile pentru tema
+> luminoasă și cea întunecată, literele (Literata și IBM Plex Sans), logo-ul cu regulile lui,
+> colțurile și mișcarea. Spațierea și regulile pentru fiecare pagină se adaugă pe măsură ce sunt
+> hotărâte. Nimic de aici nu schimbă încă site-ul sau aplicația.
 
 ## Ce găsiți aici
 
@@ -15,7 +16,7 @@ fel peste tot.
 | --- | --- |
 | `tokens/` | Sursa: valorile, în formatul standard W3C Design Tokens |
 | `build/` | Fișierele gata de folosit, făcute din `tokens/`: CSS, TypeScript și JSON |
-| `assets/` | Logo-ul (cu fișierul sursă Affinity), iconițele site-ului, imaginile pentru rețele |
+| `assets/` | Logo-ul (cu fișierele sursă Affinity), iconițele site-ului, fonturile cu licența lor, imaginile pentru rețele |
 | `guide/` | Ghidul: ce înseamnă fiecare culoare, cum se folosesc literele, cum se face o schimbare |
 | `mockups/` | Machetele fiecărei runde de redesign, păstrate cu data lor |
 | `tools/` | Scripturile care fac `build/` și verifică contrastul |

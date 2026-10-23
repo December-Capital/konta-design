@@ -26,6 +26,8 @@ const PAIRS = [
   ['ok', 'ok-bg'], ['bad', 'bad-bg'], ['plan', 'plan-bg'],
   ['ok', 'bg-raised'], ['bad', 'bg-raised'],
   ['on-selection', 'selection'],
+  ['text', 'rail'], ['text-2', 'rail'], ['text-3', 'rail'], ['text', 'rail-hover'],
+  ['text', 'rail-raised'], ['text-2', 'rail-raised'], ['text', 'row-hover'], ['text-2', 'row-hover'],
 ];
 
 function luminance(hex) {

@@ -1,7 +1,8 @@
 {
   "layout": {
     "$type": "dimension",
-    "$description": "Content width, side margins and section spacing. To be decided."
+    "$description": "Content width, side margins and section spacing. Only the text measure is decided so far.",
+    "measure": { "$value": "65ch", "$description": "Lines of body text around 65 characters long (brand book, page 19)" }
   },
   "space": {
     "$type": "dimension",

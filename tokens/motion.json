@@ -1,5 +1,10 @@
 {
   "motion": {
-    "$description": "Easing curves, durations and distances. To be decided."
+    "$description": "Motion, from redesign/DESIGN.md (2026-10-23): one entrance, rise and fade, on content below the first screen, off under prefers-reduced-motion. The curve and distance are the ones redesign/assets/konta.css uses for it. Hover and other transitions are not decided.",
+    "entrance": {
+      "duration": { "$type": "duration", "$value": "800ms" },
+      "easing": { "$type": "cubicBezier", "$value": [0.16, 1, 0.3, 1], "$description": "An ease-out" },
+      "distance": { "$type": "dimension", "$value": "22px", "$description": "How far the content rises" }
+    }
   }
 }

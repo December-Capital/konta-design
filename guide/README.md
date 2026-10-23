@@ -6,17 +6,19 @@ How Konta looks and why, for anyone building or changing a Konta surface: the si
 The values live in [`../tokens`](../tokens); this guide explains how to use them. When the two
 disagree, the tokens are right and the guide is out of date.
 
-> **Status:** the structure is in place, the content is not. Each chapter lists what it will
-> hold. Chapters are filled as the palette and each surface are decided, following
-> [redesign-process.md](redesign-process.md).
+> **Status:** the brand of 2026-10-23 is in: colour, type, the logo, corners and the one
+> entrance. Spacing, the pages of the site and the screens of the app are still to come, and a
+> few brand questions are open (marked **Pending** or **Not decided** in each chapter). Chapters
+> are filled following [redesign-process.md](redesign-process.md).
 
 ## Chapters
 
 | Chapter | Will cover | State |
 | --- | --- | --- |
-| [color.md](color.md) | The palette, the role of each colour in each theme, contrast rules | Brand colours only |
-| [typography.md](typography.md) | Typefaces, sizes, figures, Romanian and Cyrillic | Empty |
-| [shape-space-motion.md](shape-space-motion.md) | Corners, spacing, surfaces, movement | Empty |
+| [color.md](color.md) | The palette, the role of each colour in each theme, contrast rules | Written; board in [palette/](palette) |
+| [typography.md](typography.md) | Typefaces, sizes, figures, Romanian and Cyrillic | Written; text face pending |
+| [logo.md](logo.md) | Lockups, clear space, minimum size, which version on which background, the icon | Written; SVG and PDF files to come |
+| [shape-space-motion.md](shape-space-motion.md) | Corners, spacing, surfaces, movement | Corners and motion; spacing open |
 | [site.md](site.md) | konta.md: page structure and components | Empty |
 | [app.md](app.md) | app.konta.md: the working screens | Empty |
 | [mobile.md](mobile.md) | How the tokens reach iOS and Android | Approach written |

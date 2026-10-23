@@ -1,9 +1,55 @@
 {
   "font": {
     "$type": "fontFamily",
-    "$description": "Typefaces. To be decided."
+    "$description": "Typefaces, from the brand book (2026-10-23, page 18). Both cover Romanian (ș ț with the comma below) and Cyrillic, both are under the SIL Open Font License, and both are self-hosted from assets/fonts/.",
+    "serif": { "$value": ["Literata", "Georgia", "Times New Roman", "serif"], "$description": "Logo, headings and large figures. SemiBold 600, always the 24pt optical size" },
+    "sans": { "$value": ["IBM Plex Sans", "Segoe UI", "Roboto", "Arial", "sans-serif"], "$description": "Body text, labels, tables, buttons and the app. 400, 500, 600. Pending the owner's confirmation: redesign/DESIGN.md names Onest here" }
   },
   "type": {
-    "$description": "Type sizes, leading and tracking. To be decided."
+    "$description": "The web type scale, from the brand book's hierarchy table (page 19). Where the brand book gives a range, min and max are its two ends; how a size moves between them is not decided. The app's denser sizes are not decided either.",
+    "heading": {
+      "weight": { "$type": "fontWeight", "$value": 600, "$description": "Display, h1 and h2 are Literata SemiBold" },
+      "optical-size": { "$type": "number", "$value": 24, "$description": "font-variation-settings 'opsz'. The display cuts thin the K's arm to a hairline" },
+      "tracking": { "$type": "dimension", "$value": "-0.01em", "$description": "-1% on headings" }
+    },
+    "display": {
+      "size-min": { "$type": "dimension", "$value": "64px" },
+      "size-max": { "$type": "dimension", "$value": "96px" },
+      "line-height": { "$type": "number", "$value": 1.05 }
+    },
+    "h1": {
+      "size-min": { "$type": "dimension", "$value": "32px" },
+      "size-max": { "$type": "dimension", "$value": "50px" },
+      "line-height": { "$type": "number", "$value": 1.16 }
+    },
+    "h2": {
+      "size-min": { "$type": "dimension", "$value": "24px" },
+      "size-max": { "$type": "dimension", "$value": "32px" },
+      "line-height": { "$type": "number", "$value": 1.22 }
+    },
+    "h3": {
+      "$description": "IBM Plex Sans 600, not Literata",
+      "size": { "$type": "dimension", "$value": "17px" },
+      "line-height": { "$type": "number", "$value": 1.3 },
+      "weight": { "$type": "fontWeight", "$value": 600 }
+    },
+    "body": {
+      "size": { "$type": "dimension", "$value": "17px" },
+      "line-height": { "$type": "number", "$value": 1.62 },
+      "weight": { "$type": "fontWeight", "$value": 400 }
+    },
+    "small": {
+      "size-min": { "$type": "dimension", "$value": "14px" },
+      "size-max": { "$type": "dimension", "$value": "15px" },
+      "line-height": { "$type": "number", "$value": 1.5 }
+    },
+    "label": {
+      "$description": "Short labels in capitals",
+      "size-min": { "$type": "dimension", "$value": "12px" },
+      "size-max": { "$type": "dimension", "$value": "13px" },
+      "weight": { "$type": "fontWeight", "$value": 600 },
+      "tracking": { "$type": "dimension", "$value": "0.08em" }
+    },
+    "figures": { "$value": "tabular-nums", "$description": "font-variant-numeric for every amount, so digits line up in columns" }
   }
 }
