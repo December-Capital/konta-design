@@ -83,7 +83,7 @@ export const base = {
   "radius-m": "8px",
   "radius-l": "10px",
   "radius-pill": "999px",
-  "measure": "65ch",
+  "measure": "100%",
   "motion-entrance-duration": "800ms",
   "motion-entrance-easing": "cubic-bezier(0.16, 1, 0.3, 1)",
   "motion-entrance-distance": "22px"

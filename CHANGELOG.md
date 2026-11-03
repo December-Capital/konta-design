@@ -21,7 +21,8 @@ redesign's `DESIGN.md` for the roles, corners and motion.
   not apply), with the brand book's web sizes (`--type-*`). The web fonts and the print cut,
   with their SIL Open Font Licences, in `assets/fonts/`.
 - **Shape and motion.** Radii 4, 8 and 10px and pill buttons; one entrance, 800ms, 22px rise.
-  `--measure: 65ch` for body text.
+  `--measure: 100%`: body text runs the full width of its column (the owner, 2026-11-03,
+  replacing the brand book's 65ch).
 - **Logo.** The mark in five colour versions and the konta.md lockups (horizontal and stacked)
   in four, named `konta-<lockup>-<colour>` as the brand book asks, with their Affinity sources.
   The earlier drawing's PNGs (`konta-mark.png`, `konta-mark-dark.png`, `konta-icon-*.png`,

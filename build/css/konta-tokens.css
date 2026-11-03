@@ -106,7 +106,7 @@
   --radius-pill: 999px;
 
   /* layout */
-  --measure: 65ch;
+  --measure: 100%;
 
   /* motion */
   --motion-entrance-duration: 800ms;

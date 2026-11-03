@@ -67,6 +67,7 @@ The app's denser sizes are not decided yet.
 
 - Sentence case for headings and buttons. Capitals only for short labels, with the extra
   letter-spacing.
-- Lines of body text around 65 characters (`--measure: 65ch`).
+- Body text runs the full width of its column (`--measure: 100%`); see
+  [shape-space-motion.md](shape-space-motion.md#space).
 - The name is always Konta, in title case: never KONTA or konta (the konta.md address is the
   one lowercase exception).

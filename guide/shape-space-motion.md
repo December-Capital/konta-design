@@ -25,7 +25,12 @@ Tables keep thin rules (`--line`). The logo never gets a shadow, glow or outline
 
 ## Space
 
-Lines of body text are around 65 characters long: `--measure: 65ch`.
+Body text runs the full width of its column, to the same right edge as the headings, panels and
+tables around it: `--measure: 100%`. No paragraph, lead, note or list stops partway across the
+page at a character count, and sentences run on rather than starting a new line each. Where a
+page has two columns side by side (text beside a form or a table), the text fills its own
+column. The owner set this on 2026-11-03, after seeing text end in the middle of konta.md; it
+replaces the brand book's 65 characters (page 19).
 
 > **Not decided:** content width, side margins on phones, section spacing and the spacing steps
 > inside components. The `space` and `layout` groups stay open until they are.
