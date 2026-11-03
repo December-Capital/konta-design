@@ -1,7 +1,8 @@
 {
   "layout": {
     "$type": "dimension",
-    "$description": "Content width, side margins and section spacing. To be decided."
+    "$description": "Content width, side margins and section spacing. Only the text measure is decided so far.",
+    "measure": { "$value": "100%", "$description": "Body text runs the full width of its column, to the content edge. The owner, 2026-11-03, in place of the brand book's 65 characters (page 19)" }
   },
   "space": {
     "$type": "dimension",

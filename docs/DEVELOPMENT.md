@@ -8,10 +8,10 @@ how a product starts using them.
 | Path | Contents |
 | --- | --- |
 | `tokens/` | The source. W3C Design Tokens (DTCG) JSON: `$value`, `$type`, `$description` |
-| `tokens/color.json` | The palette. Today only the six brand colours from the logo, under `color.brand` |
-| `tokens/typography.json`, `shape.json`, `layout.json`, `motion.json` | Type, corners, layout and spacing, motion. Empty groups until decided |
-| `tokens/themes/site-light.json`, `site-dark.json` | The roles for konta.md, each pointing at a palette token. Empty until decided |
-| `tokens/themes/app-light.json`, `app-dark.json` | The app's overrides on top of the site roles. Empty until decided |
+| `tokens/color.json` | The palette: the scales `plum`, `bronze`, `neutral`, `sage`, `brick`, plus `ink`; `color.brand` points at the six logo colours on them |
+| `tokens/typography.json`, `shape.json`, `layout.json`, `motion.json` | Typefaces and the type scale, corners, layout and spacing, motion. Spacing is still an empty group |
+| `tokens/themes/site-light.json`, `site-dark.json` | The roles for konta.md, each pointing at a palette token |
+| `tokens/themes/app-light.json`, `app-dark.json` | The app's overrides on top of the site roles |
 | `build/` | Generated, committed so products can copy files without Node. Never edit by hand |
 | `build/css/konta-tokens.css` | Palette, type, shape, layout, motion, then the site roles for light and dark |
 | `build/css/konta-tokens-app.css` | The app's role overrides; load after `konta-tokens.css` |
@@ -20,8 +20,8 @@ how a product starts using them.
 | `tools/build.mjs` | Builds `build/` from `tokens/`; `--check` fails when `build/` is stale |
 | `tools/check-contrast.mjs` | WCAG AA check of every text-on-surface role pair, both themes, both surfaces |
 | `tools/compare-css.mjs` | Lists every custom property that differs between two sets of CSS files, per theme |
-| `assets/` | Logos (with the Affinity source), favicons, social images |
-| `guide/` | The design guide and the palette board |
+| `assets/` | Logos (with the Affinity sources), favicons, fonts with their licences, social images |
+| `guide/` | The design guide and the palette board (`guide/palette/`) |
 | `mockups/` | Dated design explorations, one folder per round, frozen once merged |
 
 ## Commands
@@ -53,18 +53,18 @@ explicit `data-theme`), which no built-in format does.
 | `role.bg-raised` | `--bg-raised` | roles drop `role` |
 | `font.serif` | `--serif` | fonts drop `font` |
 | `shape.radius.l` | `--radius-l` | shape drops `shape` |
-| `layout.gutter` | `--gutter` | layout drops `layout` |
-| `type.h1.size` | `--type-h1-size` | everything else keeps its full path |
+| `layout.measure` | `--measure` | layout drops `layout` |
+| `type.h1.size-max` | `--type-h1-size-max` | everything else keeps its full path |
 
-A role that points at a palette token is written as `var(--brand-sand)`, so a colour value
-exists in exactly one place. A role file looks like this:
+A role that points at a palette token is written as `var(--neutral100)`, so a colour value
+exists in exactly one place. The `color.brand` tokens point at their scale step the same way. A role file looks like this:
 
 ```json
 {
   "role": {
     "$type": "color",
-    "bg": { "$value": "{color.brand.sand}", "$description": "Page ground" },
-    "text": { "$value": "{color.brand.plum}" }
+    "bg": { "$value": "{color.neutral.100}", "$description": "Page ground. Nisip / Grafit 800" },
+    "text": { "$value": "{color.ink}", "$description": "Text. Cerneală / Nisip" }
   }
 }
 ```
@@ -92,8 +92,8 @@ konta.md.
    node tools/compare-css.mjs --a build/css/konta-tokens.css --b ../konta-www/assets/site.css
    ```
 
-4. Self-host the chosen typefaces the same way `tools/fetch-fonts.py` in konta-www fetches
-   today's fonts.
+4. Self-host the typefaces: copy `assets/fonts/` (the `woff2` files, `fonts.css` and the two
+   `*-OFL.txt` licences) from the same release. They are the files konta.md serves today.
 
 ### konta (web app)
 

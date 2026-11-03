@@ -1,6 +1,12 @@
 {
   "shape": {
-    "$description": "Corner radii. To be decided.",
-    "radius": { "$type": "dimension" }
+    "$description": "Corner radii, from redesign/DESIGN.md (2026-10-23), section Shapes and motion. Surfaces separate by a step in tone, not by borders.",
+    "radius": {
+      "$type": "dimension",
+      "s": { "$value": "4px", "$description": "Small boxes, and rows inside a group (the group's outer corners take the group's radius)" },
+      "m": { "$value": "8px", "$description": "Controls" },
+      "l": { "$value": "10px", "$description": "Panels" },
+      "pill": { "$value": "999px", "$description": "Buttons" }
+    }
   }
 }

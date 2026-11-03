@@ -1,14 +1,73 @@
 {
   "color": {
     "$type": "color",
-    "$description": "The palette. Only the brand colours read off the logo are fixed so far; the scales and supporting tones are added when the palette is decided.",
+    "$description": "The palette, from the brand book (2026-10-23, pages 13-15) and redesign/brand/paleta.html. Every colour lives on a scale; the brand colours point at the step they are.",
     "brand": {
-      "sand": { "$value": "#ECE8E1", "$description": "The logo's light field" },
-      "plum": { "$value": "#3D2C4B", "$description": "The logo mark on light" },
-      "bronze": { "$value": "#A07F54", "$description": "The logo bars on light" },
-      "lavender": { "$value": "#C9B4DD", "$description": "The logo mark on dark" },
-      "gold": { "$value": "#C9A46B", "$description": "The logo bars on dark" },
-      "graphite": { "$value": "#16161A", "$description": "The dark ground of konta.md" }
+      "$description": "The six colours read off the logo",
+      "sand": { "$value": "{color.neutral.100}", "$description": "Nisip. The light background: the paper of the ledger" },
+      "plum": { "$value": "{color.plum.800}", "$description": "Prună. The main colour on light: buttons, headings, brand bands, the footer" },
+      "bronze": { "$value": "{color.bronze.600}", "$description": "Bronz. The accent on light grounds and the chart bars. Graphics or text above 24px only on Nisip (3.0:1)" },
+      "lavender": { "$value": "{color.plum.300}", "$description": "Liliac. The main colour on dark grounds. Never text on Nisip (1.6:1)" },
+      "gold": { "$value": "{color.bronze.400}", "$description": "Aur. The accent on Prună and Grafit; large figures" },
+      "graphite": { "$value": "{color.neutral.900}", "$description": "Grafit. The base of the dark scale and the text on Liliac; dark grounds use steps 600-800" }
+    },
+    "plum": {
+      "$description": "Prună. 300 is Liliac, 800 is Prună from the logo",
+      "50": { "$value": "#F4F0F7" },
+      "100": { "$value": "#E7DEEF" },
+      "200": { "$value": "#D8C9E6" },
+      "300": { "$value": "#C9B4DD", "$description": "Liliac" },
+      "400": { "$value": "#A58DBD" },
+      "500": { "$value": "#7E6797" },
+      "600": { "$value": "#5E4874" },
+      "700": { "$value": "#4E3A60" },
+      "800": { "$value": "#3D2C4B", "$description": "Prună" },
+      "900": { "$value": "#2A2033", "$description": "Prună noapte: hover, deep bands, the footer" },
+      "950": { "$value": "#1C1522" }
+    },
+    "bronze": {
+      "$description": "Bronz și Aur. 400 is Aur, 600 is Bronz from the logo",
+      "50": { "$value": "#F8F2E8" },
+      "100": { "$value": "#F0E4CF" },
+      "200": { "$value": "#E3CDA6" },
+      "300": { "$value": "#D6B886" },
+      "400": { "$value": "#C9A46B", "$description": "Aur" },
+      "500": { "$value": "#B39060" },
+      "600": { "$value": "#A07F54", "$description": "Bronz" },
+      "700": { "$value": "#8A6A42" },
+      "800": { "$value": "#7A5E3A", "$description": "Bronz text: bronze for small text" },
+      "900": { "$value": "#5E4830" },
+      "950": { "$value": "#3F3020" }
+    },
+    "neutral": {
+      "$description": "Nisip și Grafit. 100 is Nisip, 900 is Grafit",
+      "0": { "$value": "#FFFFFF", "$description": "Alb: surfaces in the app" },
+      "50": { "$value": "#F7F5F1", "$description": "Hârtie: surfaces on Nisip" },
+      "100": { "$value": "#ECE8E1", "$description": "Nisip" },
+      "200": { "$value": "#DED8CE", "$description": "Nisip adânc: fields, secondary buttons" },
+      "300": { "$value": "#CFC7BA" },
+      "400": { "$value": "#A5A3AD" },
+      "500": { "$value": "#79777F" },
+      "600": { "$value": "#3C3B44" },
+      "700": { "$value": "#2B2B32" },
+      "800": { "$value": "#1D1D22", "$description": "Grafit 2: the dark ground" },
+      "900": { "$value": "#16161A", "$description": "Grafit" },
+      "950": { "$value": "#121215" }
+    },
+    "ink": { "$value": "#241B2E", "$description": "Cerneală: text on light grounds" },
+    "sage": {
+      "$description": "Salvie: done",
+      "50": { "$value": "#E4ECE5" },
+      "300": { "$value": "#77A385" },
+      "600": { "$value": "#3F6B4D" },
+      "900": { "$value": "#1E2B22" }
+    },
+    "brick": {
+      "$description": "Cărămidă: late, error",
+      "50": { "$value": "#F3E3E0" },
+      "300": { "$value": "#CD8880" },
+      "600": { "$value": "#8F3F38" },
+      "900": { "$value": "#2E1D1B" }
     }
   }
 }
