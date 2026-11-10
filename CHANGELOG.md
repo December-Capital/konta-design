@@ -17,8 +17,10 @@ The palette and the site's roles, as konta.md serves them since 2026-11-10.
 - One corner, `--radius-m` (6px), for panels, result tables and their notes, buttons, fields.
 - Motion: the tools' rolling digits (650ms, a spring's settle) and the header fold (250ms).
 - `npm run check` tests 18 more pairs: quiet bands, panels, results in green and red, the
-  bar's hover, the strip's flag, the brand band. One known gap on light (Salvie 600 on Nisip
-  adânc, 4.33:1) is listed in `guide/color.md` and left out until fixed.
+  bar's hover, the strip's flag, the brand band.
+- Salvie 700 (`#3C6549`) and the role `ok-strong`: green figures on a sunken ground. Salvie
+  600 on Nisip adânc was 4.33:1 (the IT Park total on light); Salvie 700 is 4.7:1, and
+  konta.md uses it there since 2026-11-10.
 - The guide: colour (palette, roles, rules, contrast), the site's page structure and
   components, shape, surfaces and motion. The palette board in `guide/palette/`.
 

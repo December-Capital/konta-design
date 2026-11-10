@@ -130,6 +130,10 @@
       "$value": "{color.sage.600}",
       "$description": "Done; the smaller of two compared amounts; good news (\"Gratis\")"
     },
+    "ok-strong": {
+      "$value": "{color.sage.700}",
+      "$description": "Green figures on a sunken ground: the IT Park totals and verdict"
+    },
     "ok-bg": {
       "$value": "{color.sage.50}",
       "$description": "The done state's ground"

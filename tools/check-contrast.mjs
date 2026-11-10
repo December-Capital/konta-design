@@ -31,9 +31,8 @@ const PAIRS = [
   ['text', 'bg-quiet'], ['text-2', 'bg-quiet'],
   ['text', 'bg-panel'], ['text-2', 'bg-panel'], ['text-3', 'bg-panel'],
   ['text', 'results'], ['text-2', 'results'], ['ok', 'results'], ['bad', 'results'],
-  // Known gap, not tested until fixed: on light, ok (#3F6B4D) on bg-sunken (#DED8CE) is
-  // 4.33:1, the IT Park total in green on its sunken row. See guide/color.md, "Open".
-  ['bad', 'bg-sunken'],
+  // Green figures on a sunken ground use ok-strong: Salvie 600 (ok) on Nisip adânc is 4.33:1.
+  ['ok-strong', 'bg-sunken'], ['ok-strong', 'results'], ['bad', 'bg-sunken'],
   ['text', 'bar-hover'], ['accent-text', 'bar'],
   ['notice-flag', 'notice'], ['notice-flag', 'offer'], ['on-offer', 'offer'],
   ['on-field', 'form-card'], ['warn', 'warn-bg'],
