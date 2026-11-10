@@ -5,9 +5,10 @@ logo-ul și regulile după care se folosesc. Site-ul [konta.md](https://konta.md
 și, mai târziu, aplicațiile pentru iPhone și Android își iau aspectul de aici, ca să arate la
 fel peste tot.
 
-> **Stadiu: doar structura.** Sunt fixate deocamdată numai cele șase culori din logo. Paleta
-> completă, literele și regulile pentru fiecare pagină se adaugă pe măsură ce sunt hotărâte.
-> Nimic de aici nu schimbă încă site-ul sau aplicația.
+> **Stadiu: paleta și culorile site-ului.** Sunt fixate culorile din logo, paleta completă
+> (cu scara Radix Mauve pentru tema întunecată) și rolurile site-ului konta.md pe ambele teme,
+> așa cum le servește site-ul din 10 noiembrie 2026. Literele, spațiile și rolurile aplicației
+> se adaugă pe măsură ce sunt hotărâte.
 
 ## Ce găsiți aici
 

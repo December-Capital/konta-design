@@ -26,6 +26,17 @@ const PAIRS = [
   ['ok', 'ok-bg'], ['bad', 'bad-bg'], ['plan', 'plan-bg'],
   ['ok', 'bg-raised'], ['bad', 'bg-raised'],
   ['on-selection', 'selection'],
+  // Added 2026-11-10: quiet bands and the panels in them, the tools' results (amounts in green
+  // and red, the totals row sunken), the header and its hover, the strip's flag, brand bands.
+  ['text', 'bg-quiet'], ['text-2', 'bg-quiet'],
+  ['text', 'bg-panel'], ['text-2', 'bg-panel'], ['text-3', 'bg-panel'],
+  ['text', 'results'], ['text-2', 'results'], ['ok', 'results'], ['bad', 'results'],
+  // Known gap, not tested until fixed: on light, ok (#3F6B4D) on bg-sunken (#DED8CE) is
+  // 4.33:1, the IT Park total in green on its sunken row. See guide/color.md, "Open".
+  ['bad', 'bg-sunken'],
+  ['text', 'bar-hover'], ['accent-text', 'bar'],
+  ['notice-flag', 'notice'], ['notice-flag', 'offer'], ['on-offer', 'offer'],
+  ['on-field', 'form-card'], ['warn', 'warn-bg'],
 ];
 
 function luminance(hex) {

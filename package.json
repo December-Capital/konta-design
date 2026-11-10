@@ -1,6 +1,6 @@
 {
   "name": "konta-design",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Konta's visual design as data: colour, type, shape, spacing and motion tokens, brand assets, the design guide and dated mockups.",
   "type": "module",
   "private": true,
