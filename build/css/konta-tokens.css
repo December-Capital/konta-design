@@ -68,6 +68,7 @@
   --sage50: #E4ECE5;
   --sage300: #77A385;
   --sage600: #3F6B4D;
+  --sage700: #3C6549;
   --sage900: #1B2A1E;
 
   /* color brick */
@@ -121,6 +122,7 @@
   --on-footer: var(--sand100);
   --footer-head: var(--gold400);
   --ok: var(--sage600);
+  --ok-strong: var(--sage700);
   --ok-bg: var(--sage50);
   --bad: var(--brick600);
   --bad-bg: var(--brick50);
@@ -165,6 +167,7 @@
     --on-footer: var(--sand100);
     --footer-head: var(--gold400);
     --ok: var(--sage300);
+    --ok-strong: var(--sage300);
     --ok-bg: var(--sage900);
     --bad: var(--brick300);
     --bad-bg: var(--brick900);
@@ -209,6 +212,7 @@
   --on-footer: var(--sand100);
   --footer-head: var(--gold400);
   --ok: var(--sage300);
+  --ok-strong: var(--sage300);
   --ok-bg: var(--sage900);
   --bad: var(--brick300);
   --bad-bg: var(--brick900);

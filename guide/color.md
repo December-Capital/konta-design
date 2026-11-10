@@ -28,7 +28,7 @@ Read off the logo.
 - **Mauve** (`--mauve1` to `--mauve12`): [Radix Mauve](https://www.radix-ui.com/colors), dark.
   The dark theme is built on it since 2026-11-10. The owner's tuned dark shades were within
   ΔE 2 of it, so the published scale was adopted, each step in the role Radix gives it.
-- **Salvie** (`--sage50`, `300`, `600`, `900`) and **Cărămidă** (`--brick50`, `300`, `600`,
+- **Salvie** (`--sage50`, `300`, `600`, `700`, `900`) and **Cărămidă** (`--brick50`, `300`, `600`,
   `900`): the state colours.
 - **Cerneală** (`--ink`) and **Alb** (`--white`).
 
@@ -53,6 +53,7 @@ The site's roles, as konta-www serves them. The app has no roles of its own yet.
 | `offer` (brand band) | Prună | Mauve 4 |
 | `footer` | Prună 900 | Mauve 3 |
 | `ok`, `bad` | Salvie 600, Cărămidă 600 | Salvie 300, Cărămidă 300 |
+| `ok-strong` (green figures on a sunken ground) | Salvie 700 | Salvie 300 |
 | `ok-bg`, `bad-bg`, `plan-bg`, `warn-bg` | the 50 or 100 step of each | Salvie 900, Cărămidă 900, Mauve 5, Gold 950 |
 
 ## Rules
@@ -68,7 +69,8 @@ The site's roles, as konta-www serves them. The app has no roles of its own yet.
 - On dark, Liliac and Aur text need Mauve 6 or darker under them, Salvie and Cărămidă Mauve 5
   or darker. Mauve 7 carries only Nisip text (fields, hover).
 - When two amounts are compared, the smaller is Salvie and the larger Cărămidă, in each
-  theme's own shade. The verdict above them uses the same colour for its amounts. A word that
+  theme's own shade; on a sunken ground the green is `ok-strong` (Salvie 700 on light). The
+  verdict above them uses the same colour for its amounts. A word that
   is good news, like "Gratis", may be Salvie too.
 - Liliac never sits on Nisip (1.6:1); Bronz on Nisip only for graphics or text above 24px.
 
@@ -87,13 +89,11 @@ large text). Key pairs:
 | Aur on Mauve 3 | 6.8 |
 | Nisip on Mauve 7 (fields) | 7.5 |
 | Salvie 300 on Mauve 5 (dark totals row) | 4.6 |
+| Salvie 700 on Nisip adânc (light totals row) | 4.7 |
 | Bronz text on Nisip | 4.9 |
 
 ## Open
 
-- On light, Salvie 600 on Nisip adânc is 4.33:1: the IT Park total in green on its sunken row
-  falls just short of 4.5:1. The pair is left out of `npm run check` until it is fixed, by a
-  darker green for that row or a lighter row.
 - The footer's text on konta.md is `#E7EEEF`; the tokens give Nisip (`#ECE8E1`).
 - `accent-rule` on dark is `#96794F` on konta.md; the nearest palette step is Gold 700
   (`#8A6A42`).
