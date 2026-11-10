@@ -1,14 +1,80 @@
 {
   "color": {
     "$type": "color",
-    "$description": "The palette. Only the brand colours read off the logo are fixed so far; the scales and supporting tones are added when the palette is decided.",
+    "$description": "The palette. The brand colours read off the logo, the scales built from them (brand book 1.1), the Radix Mauve scale the dark theme is built on since 2026-11-10, and the state colours.",
     "brand": {
       "sand": { "$value": "#ECE8E1", "$description": "The logo's light field" },
       "plum": { "$value": "#3D2C4B", "$description": "The logo mark on light" },
       "bronze": { "$value": "#A07F54", "$description": "The logo bars on light" },
       "lavender": { "$value": "#C9B4DD", "$description": "The logo mark on dark" },
       "gold": { "$value": "#C9A46B", "$description": "The logo bars on dark" },
-      "graphite": { "$value": "#16161A", "$description": "The dark ground of konta.md" }
+      "graphite": { "$value": "#16161A", "$description": "Text on Liliac in the dark theme. Until 2026-11-10 also the dark ground of konta.md, now Mauve 3" }
+    },
+    "white": { "$value": "#FFFFFF", "$description": "Alb: cards on a raised band, form fields on light" },
+    "ink": { "$value": "#241B2E", "$description": "Cerneală: text on light grounds" },
+    "plum": {
+      "$description": "Prună, 50 to 950. 300 is Liliac, 800 is Prună",
+      "50": { "$value": "#F4F0F7" },
+      "100": { "$value": "#E7DEEF" },
+      "200": { "$value": "#D8C9E6" },
+      "300": { "$value": "#C9B4DD", "$description": "Liliac" },
+      "400": { "$value": "#A58DBD" },
+      "500": { "$value": "#7E6797" },
+      "600": { "$value": "#5E4874" },
+      "700": { "$value": "#4E3A60" },
+      "800": { "$value": "#3D2C4B", "$description": "Prună" },
+      "900": { "$value": "#2A2033", "$description": "Prună noapte" },
+      "950": { "$value": "#1C1522" }
+    },
+    "gold": {
+      "$description": "Bronz and Aur, 50 to 950. 400 is Aur, 600 is Bronz, 800 is Bronz text",
+      "50": { "$value": "#F8F2E8" },
+      "100": { "$value": "#F0E4CF" },
+      "200": { "$value": "#E3CDA6" },
+      "300": { "$value": "#D6B886" },
+      "400": { "$value": "#C9A46B", "$description": "Aur" },
+      "500": { "$value": "#B39060" },
+      "600": { "$value": "#A07F54", "$description": "Bronz" },
+      "700": { "$value": "#8A6A42" },
+      "800": { "$value": "#7A5E3A", "$description": "Bronz text: small bronze text on Nisip and Hârtie" },
+      "900": { "$value": "#5E4830" },
+      "950": { "$value": "#3F3020" }
+    },
+    "sand": {
+      "$description": "Nisip, the light grounds. 50 is Hârtie, 100 is Nisip, 200 is Nisip adânc",
+      "50": { "$value": "#F7F5F1", "$description": "Hârtie" },
+      "100": { "$value": "#ECE8E1", "$description": "Nisip" },
+      "200": { "$value": "#DED8CE", "$description": "Nisip adânc" },
+      "300": { "$value": "#CFC7BA" }
+    },
+    "mauve": {
+      "$description": "Radix Mauve, dark (radix-ui.com/colors), the neutral the dark theme is built on since 2026-11-10, each step in the role Radix gives it",
+      "1": { "$value": "#121113" },
+      "2": { "$value": "#1A191B", "$description": "Quiet bands" },
+      "3": { "$value": "#232225", "$description": "The page, the strip, the footer" },
+      "4": { "$value": "#2B292D", "$description": "Panels" },
+      "5": { "$value": "#323035", "$description": "Sunken rows inside a panel" },
+      "6": { "$value": "#3C393F", "$description": "The top bar and lines" },
+      "7": { "$value": "#49474E", "$description": "Form fields, hover, the bar's rule" },
+      "8": { "$value": "#625F69" },
+      "9": { "$value": "#6F6D78" },
+      "10": { "$value": "#7C7A85", "$description": "Outlines of buttons and fields" },
+      "11": { "$value": "#B5B2BC", "$description": "Tertiary text" },
+      "12": { "$value": "#EEEEF0" }
+    },
+    "sage": {
+      "$description": "Salvie: done, and the smaller of two compared amounts",
+      "50": { "$value": "#E4ECE5" },
+      "300": { "$value": "#77A385" },
+      "600": { "$value": "#3F6B4D" },
+      "900": { "$value": "#1B2A1E", "$description": "Radix Grass 3 since 2026-11-10" }
+    },
+    "brick": {
+      "$description": "Cărămidă: late or wrong, and the larger of two compared amounts",
+      "50": { "$value": "#F3E3E0" },
+      "300": { "$value": "#CD8880" },
+      "600": { "$value": "#8F3F38" },
+      "900": { "$value": "#2E1D1B" }
     }
   }
 }

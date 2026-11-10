@@ -1,5 +1,13 @@
 {
   "motion": {
-    "$description": "Easing curves, durations and distances. To be decided."
+    "$description": "Easing curves and durations. Decided so far: the rolling digits of the tools' results and the header fold. Every movement is dropped for readers who ask for reduced motion.",
+    "roll": {
+      "duration": { "$type": "duration", "$value": "650ms", "$description": "Rolling digits: each digit turns on its own wheel to the new figure, then the cell holds plain text again (2026-11-10)" },
+      "easing": { "$type": "cubicBezier", "$value": [0.22, 1.18, 0.36, 1], "$description": "A spring's settle: quick out of the old digit, a slight run past the new one, back" }
+    },
+    "fold": {
+      "duration": { "$type": "duration", "$value": "250ms", "$description": "The header folding its rows of sections on scroll, and the tools' tabs rising with it" },
+      "easing": { "$type": "cubicBezier", "$value": [0.25, 0.1, 0.25, 1], "$description": "CSS ease" }
+    }
   }
 }

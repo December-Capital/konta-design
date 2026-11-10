@@ -8,9 +8,9 @@ how a product starts using them.
 | Path | Contents |
 | --- | --- |
 | `tokens/` | The source. W3C Design Tokens (DTCG) JSON: `$value`, `$type`, `$description` |
-| `tokens/color.json` | The palette. Today only the six brand colours from the logo, under `color.brand` |
-| `tokens/typography.json`, `shape.json`, `layout.json`, `motion.json` | Type, corners, layout and spacing, motion. Empty groups until decided |
-| `tokens/themes/site-light.json`, `site-dark.json` | The roles for konta.md, each pointing at a palette token. Empty until decided |
+| `tokens/color.json` | The palette: the brand colours, the Prună, Bronz and Aur, Nisip and Radix Mauve scales, Salvie and Cărămidă |
+| `tokens/typography.json`, `shape.json`, `layout.json`, `motion.json` | Type, corners, layout and spacing, motion. One corner and two motions decided; the rest empty until decided |
+| `tokens/themes/site-light.json`, `site-dark.json` | The roles for konta.md, each pointing at a palette token, as the site serves them |
 | `tokens/themes/app-light.json`, `app-dark.json` | The app's overrides on top of the site roles. Empty until decided |
 | `build/` | Generated, committed so products can copy files without Node. Never edit by hand |
 | `build/css/konta-tokens.css` | Palette, type, shape, layout, motion, then the site roles for light and dark |

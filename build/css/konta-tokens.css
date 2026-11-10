@@ -11,6 +11,210 @@
   --brand-lavender: #C9B4DD;
   --brand-gold: #C9A46B;
   --brand-graphite: #16161A;
+
+  /* color white */
+  --white: #FFFFFF;
+
+  /* color ink */
+  --ink: #241B2E;
+
+  /* color plum */
+  --plum50: #F4F0F7;
+  --plum100: #E7DEEF;
+  --plum200: #D8C9E6;
+  --plum300: #C9B4DD;
+  --plum400: #A58DBD;
+  --plum500: #7E6797;
+  --plum600: #5E4874;
+  --plum700: #4E3A60;
+  --plum800: #3D2C4B;
+  --plum900: #2A2033;
+  --plum950: #1C1522;
+
+  /* color gold */
+  --gold50: #F8F2E8;
+  --gold100: #F0E4CF;
+  --gold200: #E3CDA6;
+  --gold300: #D6B886;
+  --gold400: #C9A46B;
+  --gold500: #B39060;
+  --gold600: #A07F54;
+  --gold700: #8A6A42;
+  --gold800: #7A5E3A;
+  --gold900: #5E4830;
+  --gold950: #3F3020;
+
+  /* color sand */
+  --sand50: #F7F5F1;
+  --sand100: #ECE8E1;
+  --sand200: #DED8CE;
+  --sand300: #CFC7BA;
+
+  /* color mauve */
+  --mauve1: #121113;
+  --mauve2: #1A191B;
+  --mauve3: #232225;
+  --mauve4: #2B292D;
+  --mauve5: #323035;
+  --mauve6: #3C393F;
+  --mauve7: #49474E;
+  --mauve8: #625F69;
+  --mauve9: #6F6D78;
+  --mauve10: #7C7A85;
+  --mauve11: #B5B2BC;
+  --mauve12: #EEEEF0;
+
+  /* color sage */
+  --sage50: #E4ECE5;
+  --sage300: #77A385;
+  --sage600: #3F6B4D;
+  --sage900: #1B2A1E;
+
+  /* color brick */
+  --brick50: #F3E3E0;
+  --brick300: #CD8880;
+  --brick600: #8F3F38;
+  --brick900: #2E1D1B;
+
+  /* shape */
+  --radius-m: 6px;
+
+  /* motion */
+  --motion-roll-duration: 650ms;
+  --motion-roll-easing: cubic-bezier(0.22, 1.18, 0.36, 1);
+  --motion-fold-duration: 250ms;
+  --motion-fold-easing: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* Site roles: none defined yet */
+/* Site roles */
+
+:root {
+  --bg: var(--sand100);
+  --bg-quiet: var(--sand50);
+  --bg-raised: var(--sand50);
+  --bg-panel: var(--white);
+  --bg-sunken: var(--sand200);
+  --hero: var(--sand100);
+  --results: var(--sand100);
+  --text: var(--ink);
+  --text-2: var(--plum700);
+  --text-3: var(--plum600);
+  --rule: var(--sand200);
+  --rule-strong: var(--sand300);
+  --bar: var(--sand50);
+  --bar-line: var(--sand200);
+  --bar-hover: var(--sand200);
+  --primary: var(--plum800);
+  --on-primary: var(--white);
+  --accent-text: var(--gold800);
+  --accent-rule: var(--gold600);
+  --field: var(--white);
+  --on-field: var(--ink);
+  --on-field-2: var(--plum700);
+  --form-card: var(--sand100);
+  --notice: var(--plum800);
+  --on-notice: var(--plum200);
+  --notice-flag: var(--gold400);
+  --offer: var(--plum800);
+  --on-offer: var(--sand200);
+  --footer: var(--plum900);
+  --on-footer: var(--sand100);
+  --footer-head: var(--gold400);
+  --ok: var(--sage600);
+  --ok-bg: var(--sage50);
+  --bad: var(--brick600);
+  --bad-bg: var(--brick50);
+  --plan: var(--plum600);
+  --plan-bg: var(--plum100);
+  --warn: var(--gold800);
+  --warn-bg: var(--gold100);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: var(--mauve3);
+    --bg-quiet: var(--mauve2);
+    --bg-raised: var(--mauve4);
+    --bg-panel: var(--mauve4);
+    --bg-sunken: var(--mauve5);
+    --hero: var(--mauve3);
+    --results: var(--mauve4);
+    --text: var(--sand100);
+    --text-2: var(--sand300);
+    --text-3: var(--mauve11);
+    --rule: var(--mauve6);
+    --rule-strong: var(--mauve10);
+    --bar: var(--mauve6);
+    --bar-line: var(--mauve7);
+    --bar-hover: var(--mauve7);
+    --primary: var(--plum300);
+    --on-primary: var(--brand-graphite);
+    --accent-text: var(--gold400);
+    --accent-rule: var(--gold700);
+    --field: var(--mauve7);
+    --on-field: var(--sand100);
+    --on-field-2: var(--sand300);
+    --form-card: var(--mauve4);
+    --notice: var(--mauve3);
+    --on-notice: var(--sand300);
+    --notice-flag: var(--gold400);
+    --offer: var(--mauve4);
+    --on-offer: var(--sand200);
+    --footer: var(--mauve3);
+    --on-footer: var(--sand100);
+    --footer-head: var(--gold400);
+    --ok: var(--sage300);
+    --ok-bg: var(--sage900);
+    --bad: var(--brick300);
+    --bad-bg: var(--brick900);
+    --plan: var(--sand300);
+    --plan-bg: var(--mauve5);
+    --warn: var(--gold400);
+    --warn-bg: var(--gold950);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: var(--mauve3);
+  --bg-quiet: var(--mauve2);
+  --bg-raised: var(--mauve4);
+  --bg-panel: var(--mauve4);
+  --bg-sunken: var(--mauve5);
+  --hero: var(--mauve3);
+  --results: var(--mauve4);
+  --text: var(--sand100);
+  --text-2: var(--sand300);
+  --text-3: var(--mauve11);
+  --rule: var(--mauve6);
+  --rule-strong: var(--mauve10);
+  --bar: var(--mauve6);
+  --bar-line: var(--mauve7);
+  --bar-hover: var(--mauve7);
+  --primary: var(--plum300);
+  --on-primary: var(--brand-graphite);
+  --accent-text: var(--gold400);
+  --accent-rule: var(--gold700);
+  --field: var(--mauve7);
+  --on-field: var(--sand100);
+  --on-field-2: var(--sand300);
+  --form-card: var(--mauve4);
+  --notice: var(--mauve3);
+  --on-notice: var(--sand300);
+  --notice-flag: var(--gold400);
+  --offer: var(--mauve4);
+  --on-offer: var(--sand200);
+  --footer: var(--mauve3);
+  --on-footer: var(--sand100);
+  --footer-head: var(--gold400);
+  --ok: var(--sage300);
+  --ok-bg: var(--sage900);
+  --bad: var(--brick300);
+  --bad-bg: var(--brick900);
+  --plan: var(--sand300);
+  --plan-bg: var(--mauve5);
+  --warn: var(--gold400);
+  --warn-bg: var(--gold950);
+  color-scheme: dark;
+}

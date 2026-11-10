@@ -1,6 +1,9 @@
 {
   "shape": {
-    "$description": "Corner radii. To be decided.",
-    "radius": { "$type": "dimension" }
+    "$description": "Corner radii. Decided so far: the one corner the site uses for panels, controls and buttons.",
+    "radius": {
+      "$type": "dimension",
+      "m": { "$value": "6px", "$description": "Panels (the register, the tools' result tables and notes, the contact form card), buttons, fields, the header's chips. A result table is rounded like the register, its corner cells too, so a row's ground follows the corner (2026-11-10)" }
+    }
   }
 }

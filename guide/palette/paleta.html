@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Konta · Paleta de culori</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <style>
+    :root { --sand:#ECE8E1; --plum:#3D2C4B; --bronze:#A07F54; --lav:#C9B4DD; --gold:#C9A46B; --graph:#232225; --ink:#241B2E; --soft:#5A4E63; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #E4DFD7; font: 400 15px/1.45 'Onest', system-ui, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+    .board { width: 1600px; margin: 0 auto; background: var(--sand); padding: 72px 80px 80px; }
+    h1, h2, h3 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; margin: 0; letter-spacing: -0.02em; }
+    .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; }
+    .top h1 { font-size: 64px; line-height: 1; letter-spacing: -0.035em; }
+    .top p { color: var(--soft); max-width: 520px; font-size: 17px; margin-top: 14px; }
+    .mark { display: flex; align-items: center; gap: 14px; }
+    .mark img { width: 92px; }
+    .mark span { font: 600 44px/1 'Source Serif 4', serif; letter-spacing: -0.03em; }
+    .label { font-weight: 600; font-size: 14px; color: var(--soft); margin: 56px 0 16px; display: flex; justify-content: space-between; }
+    .label em { font-style: normal; font-weight: 500; }
+
+    /* Core */
+    .core { display: grid; grid-template-columns: 1.25fr 1.25fr 1fr 1fr 1fr 1.1fr; gap: 10px; height: 360px; }
+    .sw { border-radius: 10px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+    .sw h3 { font-size: 26px; }
+    .sw .role { font-size: 13.5px; opacity: .82; margin-top: 6px; max-width: 26ch; }
+    .sw .codes { font-size: 13px; font-weight: 600; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
+    .sw .codes span { opacity: .7; font-weight: 500; }
+    .sw--line { box-shadow: inset 0 0 0 1.5px #CFC7BA; }
+
+    /* Extended */
+    .ext { display: grid; grid-template-columns: repeat(9, 1fr); gap: 10px; }
+    .chip { border-radius: 10px; height: 150px; padding: 14px; display: flex; flex-direction: column; justify-content: flex-end; font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .chip b { font-size: 14.5px; display: block; }
+    .chip span { opacity: .75; font-weight: 500; }
+    .duo { display: grid; grid-template-rows: 1fr 1fr; gap: 6px; height: 150px; }
+    .duo .chip { height: auto; border-radius: 8px; padding: 10px 12px; }
+
+    /* Scales */
+    .scales { display: grid; gap: 10px; }
+    .scale { display: grid; grid-template-columns: 120px repeat(11, 1fr); gap: 4px; align-items: stretch; }
+    .scale.s12 { grid-template-columns: 120px repeat(12, 1fr); }
+    .scale > b { align-self: center; font-size: 14px; }
+    .step { height: 64px; border-radius: 6px; padding: 7px 8px; display: flex; flex-direction: column; justify-content: space-between; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .step.star { box-shadow: inset 0 0 0 2px currentColor; }
+
+    /* Pairs */
+    .pairs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+    .pair { border-radius: 10px; padding: 20px; height: 170px; display: flex; flex-direction: column; justify-content: space-between; }
+    .pair .big { font: 600 34px/1 'Source Serif 4', serif; letter-spacing: -0.02em; }
+    .pair .meta { display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; font-weight: 600; }
+    .grade { padding: 3px 8px; border-radius: 999px; background: rgba(255,255,255,.18); }
+    .on-light .grade { background: rgba(36,27,46,.08); }
+
+    /* Proportion + mocks */
+    .row3 { display: grid; grid-template-columns: 1fr 1fr 1.1fr; gap: 10px; }
+    .card { border-radius: 10px; padding: 26px; }
+    .card h3 { font-size: 22px; margin-bottom: 6px; }
+    .card p { font-size: 13.5px; opacity: .8; }
+    .ratio { display: flex; height: 54px; border-radius: 8px; overflow: hidden; margin-top: 18px; }
+    .ratio div { display: flex; align-items: flex-end; padding: 8px 10px; font-size: 12px; font-weight: 600; }
+    .mock { margin-top: 18px; border-radius: 8px; padding: 18px; display: grid; gap: 12px; }
+    .mock .t { font: 600 22px/1.15 'Source Serif 4', serif; letter-spacing: -0.02em; }
+    .mock .btns { display: flex; gap: 8px; }
+    .mock .b { padding: 10px 16px; border-radius: 999px; font-weight: 600; font-size: 13px; }
+    .mock .seal { display: inline-flex; gap: 6px; align-items: center; padding: 4px 10px 4px 5px; border-radius: 999px; font-size: 12px; font-weight: 600; width: max-content; }
+    .mock .seal i { width: 14px; height: 14px; border-radius: 50%; display: grid; place-items: center; }
+    .mock .rowx { display: flex; justify-content: space-between; font-size: 13px; padding-top: 8px; border-top: 1px solid; font-variant-numeric: tabular-nums; }
+    .logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
+    .logos div { height: 120px; border-radius: 8px; display: grid; place-items: center; }
+    .logos img { width: 120px; }
+    .stack { margin-top: 18px; border-radius: 8px; overflow: hidden; display: grid; font-size: 12.5px; font-weight: 600; }
+    .stack div { display: flex; justify-content: space-between; align-items: center; padding: 0 14px; }
+    .stack span { opacity: .8; font-weight: 500; font-variant-numeric: tabular-nums; }
+    .states { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
+    .states > div { border-radius: 8px; padding: 14px; display: grid; gap: 8px; align-content: start; }
+    .st { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; width: max-content; }
+    .st::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+    .foot { margin-top: 48px; display: flex; justify-content: space-between; font-size: 13px; color: var(--soft); }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <div class="top">
+      <div>
+        <h1>Paleta de culori Konta</h1>
+        <p>Culorile citite de pe logo, cu rolul fiecăreia pe site, în aplicație și în materialele mărcii. Fiecare combinație de text are raportul de contrast WCAG alături.</p>
+      </div>
+      <div class="mark"><img src="../../assets/logo/konta-mark.png" alt=""><span>Konta</span></div>
+    </div>
+
+    <p class="label"><span>Culorile de bază, din logo</span><em>6 culori · 2 teme</em></p>
+    <div class="core">
+      <div class="sw sw--line" style="background:#ECE8E1;color:#3D2C4B">
+        <div><h3>Nisip</h3><p class="role">Fundalul temei luminoase. Hârtia registrului.</p></div>
+        <div class="codes">#ECE8E1<span>RGB 236 232 225</span></div>
+      </div>
+      <div class="sw" style="background:#3D2C4B;color:#ECE8E1">
+        <div><h3>Prună</h3><p class="role">Culoarea principală: butoane, titluri, benzile mărcii, subsolul.</p></div>
+        <div class="codes">#3D2C4B<span>RGB 61 44 75</span></div>
+      </div>
+      <div class="sw" style="background:#A07F54;color:#FFFFFF">
+        <div><h3>Bronz</h3><p class="role">Accent pe fond deschis: coloanele, sigiliul „în verificare”.</p></div>
+        <div class="codes">#A07F54<span>RGB 160 127 84</span></div>
+      </div>
+      <div class="sw" style="background:#C9B4DD;color:#2A2033">
+        <div><h3>Liliac</h3><p class="role">Culoarea principală în tema întunecată. Câmp de evidențiere pe deschis.</p></div>
+        <div class="codes">#C9B4DD<span>RGB 201 180 221</span></div>
+      </div>
+      <div class="sw" style="background:#C9A46B;color:#2A2033">
+        <div><h3>Aur</h3><p class="role">Accent pe Prună și pe Grafit. Cifrele mari.</p></div>
+        <div class="codes">#C9A46B<span>RGB 201 164 107</span></div>
+      </div>
+      <div class="sw" style="background:#232225;color:#ECE8E1">
+        <div><h3>Grafit</h3><p class="role">Fundalul temei întunecate, din scara Radix Mauve. Textul pe Liliac rămâne #16161A.</p></div>
+        <div class="codes">#232225<span>RGB 35 34 37</span></div>
+      </div>
+    </div>
+
+    <p class="label"><span>Tonuri de sprijin propuse</span><em>suprafețe, text, stări</em></p>
+    <div class="ext">
+      <div class="chip" style="background:#FFFFFF;color:#241B2E;box-shadow:inset 0 0 0 1.5px #DED8CE"><b>Alb</b>#FFFFFF<span>suprafață în aplicație</span></div>
+      <div class="chip" style="background:#F7F5F1;color:#241B2E;box-shadow:inset 0 0 0 1.5px #DED8CE"><b>Hârtie</b>#F7F5F1<span>suprafață pe Nisip</span></div>
+      <div class="chip" style="background:#DED8CE;color:#241B2E"><b>Nisip adânc</b>#DED8CE<span>câmpuri, butoane secundare</span></div>
+      <div class="chip" style="background:#241B2E;color:#ECE8E1"><b>Cerneală</b>#241B2E<span>textul pe fond deschis</span></div>
+      <div class="chip" style="background:#7A5E3A;color:#FFFFFF"><b>Bronz text</b>#7A5E3A<span>bronz pentru text mic</span></div>
+      <div class="chip" style="background:#2A2033;color:#ECE8E1"><b>Prună noapte</b>#2A2033<span>hover, benzi adânci</span></div>
+      <div class="chip" style="background:#2B292D;color:#ECE8E1"><b>Grafit panou</b>#2B292D<span>Mauve 4, panourile pe întunecat</span></div>
+      <div class="duo">
+        <div class="chip" style="background:#3F6B4D;color:#fff"><b>Salvie, „făcut”</b>#3F6B4D · #77A385</div>
+        <div class="chip" style="background:#E4ECE5;color:#3F6B4D"><b>Salvie 50 · 900</b>#E4ECE5 · #1B2A1E</div>
+      </div>
+      <div class="duo">
+        <div class="chip" style="background:#8F3F38;color:#fff"><b>Cărămidă, întârziat</b>#8F3F38 · #CD8880</div>
+        <div class="chip" style="background:#F3E3E0;color:#8F3F38"><b>Cărămidă 50 · 900</b>#F3E3E0 · #2E1D1B</div>
+      </div>
+    </div>
+
+    <p class="label"><span>Scări de ton</span><em>★ = culoarea din logo</em></p>
+    <div class="scales">
+      <div class="scale"><b>Prună</b>
+        <div class="step" style="background:#F4F0F7;color:#3D2C4B">50<span>F4F0F7</span></div>
+        <div class="step" style="background:#E7DEEF;color:#3D2C4B">100<span>E7DEEF</span></div>
+        <div class="step" style="background:#D8C9E6;color:#3D2C4B">200<span>D8C9E6</span></div>
+        <div class="step star" style="background:#C9B4DD;color:#3D2C4B">300 ★<span>C9B4DD</span></div>
+        <div class="step" style="background:#A58DBD;color:#2A2033">400<span>A58DBD</span></div>
+        <div class="step" style="background:#7E6797;color:#fff">500<span>7E6797</span></div>
+        <div class="step" style="background:#5E4874;color:#fff">600<span>5E4874</span></div>
+        <div class="step" style="background:#4E3A60;color:#fff">700<span>4E3A60</span></div>
+        <div class="step star" style="background:#3D2C4B;color:#ECE8E1">800 ★<span>3D2C4B</span></div>
+        <div class="step" style="background:#2A2033;color:#ECE8E1">900<span>2A2033</span></div>
+        <div class="step" style="background:#1C1522;color:#ECE8E1">950<span>1C1522</span></div>
+      </div>
+      <div class="scale"><b>Bronz și Aur</b>
+        <div class="step" style="background:#F8F2E8;color:#5E4830">50<span>F8F2E8</span></div>
+        <div class="step" style="background:#F0E4CF;color:#5E4830">100<span>F0E4CF</span></div>
+        <div class="step" style="background:#E3CDA6;color:#5E4830">200<span>E3CDA6</span></div>
+        <div class="step" style="background:#D6B886;color:#3F3020">300<span>D6B886</span></div>
+        <div class="step star" style="background:#C9A46B;color:#3F3020">400 ★<span>C9A46B</span></div>
+        <div class="step" style="background:#B39060;color:#2A2033">500<span>B39060</span></div>
+        <div class="step star" style="background:#A07F54;color:#fff">600 ★<span>A07F54</span></div>
+        <div class="step" style="background:#8A6A42;color:#fff">700<span>8A6A42</span></div>
+        <div class="step" style="background:#7A5E3A;color:#fff">800<span>7A5E3A</span></div>
+        <div class="step" style="background:#5E4830;color:#F0E4CF">900<span>5E4830</span></div>
+        <div class="step" style="background:#3F3020;color:#F0E4CF">950<span>3F3020</span></div>
+      </div>
+      <div class="scale"><b>Nisip</b>
+        <div class="step" style="background:#F7F5F1;color:#241B2E">50 · Hârtie<span>F7F5F1</span></div>
+        <div class="step star" style="background:#ECE8E1;color:#241B2E">100 ★<span>ECE8E1</span></div>
+        <div class="step" style="background:#DED8CE;color:#241B2E">200<span>DED8CE</span></div>
+        <div class="step" style="background:#CFC7BA;color:#241B2E">300<span>CFC7BA</span></div>
+      </div>
+      <div class="scale s12"><b>Grafit · Radix Mauve, întunecat</b>
+        <div class="step" style="background:#121113;color:#ECE8E1">1<span>121113</span></div>
+        <div class="step" style="background:#1A191B;color:#ECE8E1">2 · benzi închise<span>1A191B</span></div>
+        <div class="step star" style="background:#232225;color:#ECE8E1">3 · pagina<span>232225</span></div>
+        <div class="step" style="background:#2B292D;color:#ECE8E1">4 · panouri<span>2B292D</span></div>
+        <div class="step" style="background:#323035;color:#ECE8E1">5 · rânduri adâncite<span>323035</span></div>
+        <div class="step" style="background:#3C393F;color:#ECE8E1">6 · bara, linii<span>3C393F</span></div>
+        <div class="step" style="background:#49474E;color:#ECE8E1">7 · câmpuri, hover<span>49474E</span></div>
+        <div class="step" style="background:#625F69;color:#ECE8E1">8<span>625F69</span></div>
+        <div class="step" style="background:#6F6D78;color:#ECE8E1">9<span>6F6D78</span></div>
+        <div class="step" style="background:#7C7A85;color:#ECE8E1">10 · contururi<span>7C7A85</span></div>
+        <div class="step" style="background:#B5B2BC;color:#1A191B">11 · text terțiar<span>B5B2BC</span></div>
+        <div class="step" style="background:#EEEEF0;color:#1A191B">12<span>EEEEF0</span></div>
+      </div>
+    </div>
+
+    <p class="label"><span>Combinații de text și contrastul lor</span><em>AA: cel puțin 4,5 la text normal, 3 la text mare</em></p>
+    <div class="pairs">
+      <div class="pair on-light" style="background:#ECE8E1;color:#3D2C4B;box-shadow:inset 0 0 0 1.5px #CFC7BA"><span class="big">Prună pe Nisip</span><span class="meta">10,4 : 1<span class="grade">AAA</span></span></div>
+      <div class="pair" style="background:#3D2C4B;color:#ECE8E1"><span class="big">Nisip pe Prună</span><span class="meta">10,4 : 1<span class="grade">AAA</span></span></div>
+      <div class="pair" style="background:#3D2C4B;color:#C9A46B"><span class="big">Aur pe Prună</span><span class="meta">5,4 : 1<span class="grade">AA</span></span></div>
+      <div class="pair" style="background:#3D2C4B;color:#C9B4DD"><span class="big">Liliac pe Prună</span><span class="meta">6,7 : 1<span class="grade">AA</span></span></div>
+      <div class="pair" style="background:#232225;color:#ECE8E1"><span class="big">Nisip pe Mauve&nbsp;3</span><span class="meta">13,0 : 1<span class="grade">AAA</span></span></div>
+      <div class="pair" style="background:#232225;color:#C9B4DD"><span class="big">Liliac pe Mauve&nbsp;3</span><span class="meta">8,3 : 1<span class="grade">AAA</span></span></div>
+      <div class="pair" style="background:#232225;color:#C9A46B"><span class="big">Aur pe Mauve&nbsp;3</span><span class="meta">6,8 : 1<span class="grade">AA</span></span></div>
+      <div class="pair on-light" style="background:#C9B4DD;color:#3D2C4B"><span class="big">Prună pe Liliac</span><span class="meta">6,7 : 1<span class="grade">AA</span></span></div>
+      <div class="pair on-light" style="background:#C9A46B;color:#3D2C4B"><span class="big">Prună pe Aur</span><span class="meta">5,4 : 1<span class="grade">AA</span></span></div>
+      <div class="pair on-light" style="background:#ECE8E1;color:#7A5E3A;box-shadow:inset 0 0 0 1.5px #CFC7BA"><span class="big">Bronz text pe Nisip</span><span class="meta">4,9 : 1<span class="grade">AA</span></span></div>
+      <div class="pair on-light" style="background:#ECE8E1;color:#A07F54;box-shadow:inset 0 0 0 1.5px #CFC7BA"><span class="big">Bronz pe Nisip</span><span class="meta">3,0 : 1<span class="grade">doar text mare</span></span></div>
+      <div class="pair on-light" style="background:#ECE8E1;color:#C9B4DD;box-shadow:inset 0 0 0 1.5px #CFC7BA"><span class="big">Liliac pe Nisip</span><span class="meta">1,6 : 1<span class="grade">de evitat</span></span></div>
+    </div>
+
+    <p class="label"><span>Cum se combină: straturile paginii</span><em>de sus în jos, pe fiecare temă</em></p>
+    <div class="row3">
+      <div class="card" style="background:#F7F5F1">
+        <h3>Tema luminoasă</h3>
+        <p>Bara de sus e cu un pas mai deschisă decât primul panou. Prună e banda mărcii, iar subsolul coboară la Prună 900, cu text în tonurile deschise ale Prunei.</p>
+        <div class="stack">
+          <div style="height:30px;background:#3D2C4B;color:#D8C9E6">Bandă „În dezvoltare” · Prună 800<span>#3D2C4B</span></div>
+          <div style="height:42px;background:#F7F5F1;color:#241B2E;box-shadow:inset 0 -1px 0 #DED8CE">Bara de sus · Hârtie, la fel filele instrumentelor<span>#F7F5F1</span></div>
+          <div style="height:70px;background:#ECE8E1;color:#241B2E">Primul panou și pagina · Nisip<span>#ECE8E1</span></div>
+          <div style="height:44px;background:#F7F5F1;color:#4E3A60">Secțiune ridicată · Hârtie<span>#F7F5F1</span></div>
+          <div style="height:50px;background:#3D2C4B;color:#ECE8E1">Banda mărcii · Prună 800, cifre în Aur<span style="color:#C9A46B">#C9A46B</span></div>
+          <div style="height:64px;background:#2A2033;color:#E7DEEF">Subsol · Prună 900, linkuri Prună 100<span>#2A2033</span></div>
+        </div>
+      </div>
+      <div class="card" style="background:#232225;color:#ECE8E1">
+        <h3>Tema întunecată</h3>
+        <p>Pe scara Radix Mauve: un panou e cu un pas mai deschis decât banda lui, iar benzile vecine diferă. Culoarea o poartă doar Liliac (acțiunea) și Aur (accentul).</p>
+        <div class="stack" style="box-shadow:0 0 0 1.5px #3C393F">
+          <div style="height:30px;background:#232225;color:#CFC7BA">Bandă „În dezvoltare” · Mauve 3<span>#232225</span></div>
+          <div style="height:42px;background:#3C393F;color:#ECE8E1;box-shadow:inset 0 -1px 0 #49474E">Bara de sus · Mauve 6, linia Mauve 7<span>#3C393F</span></div>
+          <div style="height:40px;background:#232225;color:#ECE8E1">Primul panou și pagina · Mauve 3<span>#232225</span></div>
+          <div style="height:74px;background:#1A191B;color:#CFC7BA;display:grid;align-content:center;gap:6px;justify-content:stretch"><span style="display:flex;justify-content:space-between;opacity:1;font-weight:600">Bandă închisă · Mauve 2<span>#1A191B</span></span><span style="display:flex;justify-content:space-between;background:#2B292D;color:#ECE8E1;border-radius:6px;padding:8px 10px;opacity:1;font-weight:600">Panou · Mauve 4<span>#2B292D</span></span></div>
+          <div style="height:44px;background:#2B292D;color:#ECE8E1">Banda mărcii · Mauve 4, cifre în Aur<span style="color:#C9A46B">#C9A46B</span></div>
+          <div style="height:50px;background:#232225;color:#ECE8E1">Subsol · Mauve 3, text Nisip<span>#232225</span></div>
+        </div>
+      </div>
+      <div class="card" style="background:#ECE8E1;box-shadow:inset 0 0 0 1.5px #CFC7BA">
+        <h3>Acțiune și stări</h3>
+        <p>Butonul principal e Prună pe deschis și Liliac pe închis. Fiecare stare are o nuanță de fond și una de text din aceeași familie.</p>
+        <div class="states">
+          <div style="background:#F7F5F1">
+            <span class="b" style="background:#3D2C4B;color:#ECE8E1;padding:9px 14px;border-radius:999px;font-weight:600;font-size:13px;width:max-content">Încearcă Demo</span>
+            <span class="st" style="background:#E4ECE5;color:#3F6B4D">Făcut</span>
+            <span class="st" style="background:#F0E4CF;color:#7A5E3A">în verificare</span>
+            <span class="st" style="background:#E7DEEF;color:#5E4874">Planificat</span>
+            <span class="st" style="background:#F3E3E0;color:#8F3F38">Întârziat</span>
+          </div>
+          <div style="background:#232225">
+            <span class="b" style="background:#C9B4DD;color:#16161A;padding:9px 14px;border-radius:999px;font-weight:600;font-size:13px;width:max-content">Încearcă Demo</span>
+            <span class="st" style="background:#1B2A1E;color:#77A385">Făcut</span>
+            <span class="st" style="background:#3F3020;color:#C9A46B">în verificare</span>
+            <span class="st" style="background:#323035;color:#CFC7BA">Planificat</span>
+            <span class="st" style="background:#2E1D1B;color:#CD8880">Întârziat</span>
+          </div>
+        </div>
+        <div class="logos">
+          <div style="background:#F7F5F1"><img src="../../assets/logo/konta-mark.png" alt="Logo pe Hârtie"></div>
+          <div style="background:#2A2033"><img src="../../assets/logo/konta-mark-dark.png" alt="Logo pe Prună 900"></div>
+          <div style="background:#232225"><img src="../../assets/logo/konta-mark-dark.png" alt="Logo pe Grafit"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot"><span>Konta · December Capital · noiembrie 2026</span><span>Tipuri de literă: Source Serif 4 (titluri) · Onest (text și interfață)</span></div>
+  </div>
+</body>
+</html>
